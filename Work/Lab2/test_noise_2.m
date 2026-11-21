@@ -1,13 +1,13 @@
 close all; clear;
-Image = imread('L:\Labor\Техническое зрение\Lab2\izobr1.bmp'); % vvedite stroku
+Image = imread('C:\Users\Insanewave\Desktop\MATLAB_CV\Work\Lab2\izobr1.BMP'); % vvedite stroku
 if size(Image,3)~=1
     Image = rgb2gray(Image);
 end;
 Image = im2double(Image);
-noise_type = 'gaussian'; % vvedite stroku: 'gaussian','salt & pepper','speckle'
+noise_type = 'speckle'; % vvedite stroku: 'gaussian','salt & pepper','speckle'
 init_parameter = 0.00; % vvedite chislo
-step_parameter = 0.002; % vvedite chislo
-final_parameter = 0.01; % vvedite chislo
+step_parameter = 0.004; % vvedite chislo
+final_parameter = 0.02; % vvedite chislo
 for i = 1 : 6
     parameter = init_parameter + step_parameter*(i-1);
     if isequal(noise_type,'gaussian')

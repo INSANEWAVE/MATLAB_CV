@@ -1,5 +1,5 @@
 close all; clear;
-Image = imread('L:\Labor\Техническое зрение\Lab2\izobr1.bmp'); % vvedite stroku
+Image = imread('C:\Users\Insanewave\Desktop\MATLAB_CV\Work\Lab2\izobr1.BMP'); % vvedite stroku
 
 if size(Image,3)~=1
     Image = rgb2gray(Image);
